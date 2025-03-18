@@ -1,0 +1,23 @@
+<div class="task-details-container" *ngIf="task">
+    <div class="details-header">
+        <button class="back-button" (click)="goBack()">
+            ← Back to Tasks
+        </button>
+        <div class="header-actions">
+            <button class="edit-button" (click)="editTask()">Edit Task</button>
+            <button class="delete-button" (click)="deleteTask()">Delete Task</button>
+        </div>
+    </div>
+
+    <div class="details-content">
+        <h2>{{ task.title }}</h2>
+        <div class="task-meta">
+            <span class="status-badge" [class]="getStatusClass(task.status)">{{ task.status }}</span>
+            <span class="created-date">Created: {{ task.createdAt | date:'medium' }}</span>
+        </div>
+        <div class="description-section">
+            <h3>Description</h3>
+            <p>{{ task.description || 'No description provided.' }}</p>
+        </div>
+    </div>
+</div>

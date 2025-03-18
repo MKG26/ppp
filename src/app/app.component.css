@@ -1,0 +1,45 @@
+.app-container {
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    padding: 1rem;
+}
+
+.nav-bar {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar h1 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #3498db;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #f8f9fa;
+}
+
+.nav-links a.active {
+    background-color: #3498db;
+    color: white;
+}
+
+router-outlet+* {
+    padding: 2rem;
+}
